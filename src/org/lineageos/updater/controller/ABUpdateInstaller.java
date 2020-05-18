@@ -154,7 +154,7 @@ class ABUpdateInstaller {
     }
 
     static synchronized ABUpdateInstaller getInstance(Context context,
-            UpdaterController updaterController) {
+                                                      UpdaterController updaterController) {
         if (sInstance == null) {
             sInstance = new ABUpdateInstaller(context, updaterController);
         }
@@ -188,7 +188,7 @@ class ABUpdateInstaller {
                  InputStreamReader isr = new InputStreamReader(is);
                  BufferedReader br = new BufferedReader(isr)) {
                 List<String> lines = new ArrayList<>();
-                for (String line; (line = br.readLine()) != null;) {
+                for (String line; (line = br.readLine()) != null; ) {
                     lines.add(line);
                 }
                 headerKeyValuePairs = new String[lines.size()];

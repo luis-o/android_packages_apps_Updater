@@ -94,6 +94,7 @@ public class UpdaterController {
     private class DownloadEntry {
         final Update mUpdate;
         DownloadClient mDownloadClient;
+
         private DownloadEntry(Update update) {
             mUpdate = update;
         }
@@ -210,7 +211,7 @@ public class UpdaterController {
 
             @Override
             public void update(long bytesRead, long contentLength, long speed, long eta,
-                    boolean done) {
+                               boolean done) {
                 Update update = mDownloads.get(downloadId).mUpdate;
                 if (contentLength <= 0) {
                     if (update.getFileSize() <= 0) {

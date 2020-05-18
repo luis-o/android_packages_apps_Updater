@@ -87,7 +87,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
 
             @Override
             public void onResponse(int statusCode, String url,
-                    DownloadClient.Headers headers) {
+                                   DownloadClient.Headers headers) {
             }
 
             @Override
@@ -163,7 +163,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         PendingIntent updateCheckIntent = getRepeatingUpdatesCheckIntent(context);
         AlarmManager alarmMgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmMgr.setRepeating(AlarmManager.RTC, System.currentTimeMillis() +
-                Utils.getUpdateCheckInterval(context), Utils.getUpdateCheckInterval(context),
+                        Utils.getUpdateCheckInterval(context), Utils.getUpdateCheckInterval(context),
                 updateCheckIntent);
 
         Date nextCheckDate = new Date(System.currentTimeMillis() +

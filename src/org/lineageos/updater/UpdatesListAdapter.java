@@ -318,7 +318,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     }
 
     private void setButtonAction(Button button, Action action, final String downloadId,
-            boolean enabled) {
+                                 boolean enabled) {
         final View.OnClickListener clickListener;
         switch (action) {
             case DOWNLOAD:
@@ -422,7 +422,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     }
 
     private View.OnLongClickListener getLongClickListener(final UpdateInfo update,
-            final boolean canDelete, View anchor) {
+                                                          final boolean canDelete, View anchor) {
         return view -> {
             startActionMode(update, canDelete, anchor);
             return true;
