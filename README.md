@@ -44,7 +44,10 @@ it with the right key to update the one in the system partition. To do this:
 
  - Place this directory anywhere in the Android source tree
  - Generate a keystore and keystore.properties using `gen-keystore.sh`
- - Build the dependencies running `make UpdaterStudio` from the root of the
+
+`./gen-keystore.sh ../../../build/target/product/security/testkey.pk8 ../../../build/target/product/security/testkey.x509.pem  android testkey.jks`
+
+- Build the dependencies running `make UpdaterStudio` from the root of the
    Android source tree. This command will add the needed libraries in
    `system_libraries/`.
 
